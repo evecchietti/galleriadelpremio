@@ -1,0 +1,84 @@
+
+body { font-family: 'Roboto', sans-serif; background: #ffffff; color: #000000; margin: 0; padding: 0; }
+.main-header { background: #ffffff; padding: 1rem 2rem; border-bottom: 1px solid #ccc; display: flex; align-items: center; justify-content: space-between; }
+.menu { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+.menu a { color: #000; text-decoration: none; font-weight: 500; }
+.menu-toggle { display: none; }
+.has-dropdown { position: relative; }
+.has-dropdown > .dropdown { display: none; position: absolute; background: #ffffff; border: 1px solid #ccc; list-style: none; padding: 0; margin: 0; top: 100%; left: 0; z-index: 100; min-width: 200px; }
+.has-dropdown:hover > .dropdown { display: block; }
+.dropdown li { border-bottom: 1px solid #eee; }
+.dropdown li:last-child { border-bottom: none; }
+.dropdown a { display: block; padding: 0.5rem 1rem; color: #000; }
+footer { background: #ffffff; text-align: center; padding: 2rem 1rem; border-top: 1px solid #ccc; }
+.social-icons { margin-top: 1rem; display: flex; justify-content: center; gap: 1rem; }
+.social-icons img { height: 24px; }
+
+/* Slideshow responsive */
+.slideshow {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 5;
+  max-height: 600px;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding: 1rem;
+  }
+  .menu.show {
+    display: flex;
+  }
+  .menu li {
+    margin-bottom: 1rem;
+  }
+  .has-dropdown > .dropdown {
+    position: static;
+    border: none;
+  }
+}
+
+main {
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+footer p {
+  line-height: 1.2;
+  margin: 0.2rem 0;
+}
+footer .compact-footer {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
