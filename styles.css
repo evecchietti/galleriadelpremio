@@ -10,7 +10,7 @@ body { font-family: 'Roboto', sans-serif; margin: 0; background: #fff; color: #0
 .dropdown a { display: block; padding: 0.5rem 1rem; }
 @media (max-width: 768px) {
   .menu-toggle { display: block; }
-  nav .menu { display: none; flex-direction: column; position: absolute; top: 100%; right: 0; background: #fff; width: 100%; padding: 1rem; }
+  nav .menu { display: none; flex-direction: column; position: absolute; top: 100%; right: 0; background: #fff; width: 100%; padding: 1rem; z-index: 999; }
   nav .menu.show { display: flex; }
 }
 main { padding: 2rem; }
