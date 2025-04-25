@@ -1,6 +1,7 @@
 
 body { font-family: 'Roboto', sans-serif; margin: 0; background: #fff; color: #000; }
-.main-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: #fff; border-bottom: 1px solid #ccc; }
+.main-header {
+  position: relative; display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: #fff; border-bottom: 1px solid #ccc; }
 .menu-toggle { display: none; background: none; border: none; font-size: 2rem; color: #000; cursor: pointer; }
 .menu {
   z-index: 1001; list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
