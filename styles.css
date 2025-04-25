@@ -10,6 +10,7 @@ body { font-family: 'Roboto', sans-serif; background: #fff; color: #000; margin:
 .dropdown li { border-bottom: 1px solid #eee; }
 .dropdown li:last-child { border-bottom: none; }
 .dropdown a { display: block; padding: 0.5rem 1rem; color: #000; }
+
 @media (max-width: 768px) {
   .menu-toggle { display: block; }
   .menu { display: none; flex-direction: column; background: #fff; position: absolute; top: 100%; right: 0; width: 100%; border-top: 1px solid #ccc; padding: 1rem; }
@@ -17,12 +18,14 @@ body { font-family: 'Roboto', sans-serif; background: #fff; color: #000; margin:
   .menu li { margin-bottom: 1rem; }
   .has-dropdown > .dropdown { position: static; border: none; }
 }
+
 main { padding: 2rem; }
 footer { background: #fff; color: #000; text-align: center; padding: 2rem 1rem; border-top: 1px solid #ccc; }
 footer p { line-height: 1.2; margin: 0.2rem 0; }
 footer .compact-footer { font-size: 0.9rem; margin-bottom: 0.5rem; }
 .social-icons { margin-top: 1rem; display: flex; justify-content: center; gap: 1rem; }
 .social-icons img { height: 24px; }
+
 .slideshow { position: relative; width: 100%; aspect-ratio: 16 / 5; max-height: 600px; overflow: hidden; }
 .slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease-in-out; }
 .slide.active { opacity: 1; }
