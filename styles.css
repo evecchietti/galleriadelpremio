@@ -1,16 +1,86 @@
 
-body { font-family: sans-serif; margin: 0; padding: 0; }
-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: #fff; border-bottom: 1px solid #ccc; }
-.menu { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
-.menu li { position: relative; }
-.menu a { text-decoration: none; color: #000; }
-.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid #ccc; padding: 0.5rem; list-style: none; }
-.dropdown:hover .dropdown-menu { display: block; }
-.hamburger { display: none; cursor: pointer; }
-@media (max-width: 768px) {
-  .menu { display: none; flex-direction: column; background: #fff; position: absolute; top: 60px; right: 0; padding: 1rem; width: 70%; border: 1px solid #ccc; }
-  .menu.open { display: flex; }
-  .hamburger { display: block; }
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
-main { padding: 2rem; }
-footer { background: #fff; border-top: 1px solid #ccc; padding: 1rem; }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+nav.main-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.menu > li {
+  position: relative;
+}
+.menu a {
+  text-decoration: none;
+  color: #000;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  list-style: none;
+  z-index: 99;
+}
+.menu > li:hover .dropdown-menu {
+  display: block;
+}
+.menu > li:has(ul)::after {
+  content: ' ▾';
+}
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+    width: 70%;
+    border: 1px solid #ccc;
+  }
+  .menu.open {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+}
+main {
+  padding: 2rem;
+}
+footer {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
