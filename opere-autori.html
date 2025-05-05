@@ -11,15 +11,16 @@
 <header>
   <a href="index.html"><strong>LOGO</strong></a>
   <nav class="main-nav">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <ul class="menu">
-      <li>Il Museo
+      <li class="has-submenu">Il Museo <span class="arrow">▾</span>
         <ul class="dropdown-menu">
           <li><a href="collezione.html">La Collezione</a></li>
           <li><a href="storia-museo.html">Storia del Museo</a></li>
           <li><a href="orari-servizi.html">Orari e Servizi</a></li>
         </ul>
       </li>
-      <li>Il Premio Suzzara
+      <li class="has-submenu">Il Premio Suzzara <span class="arrow">▾</span>
         <ul class="dropdown-menu">
           <li><a href="storia-premio.html">Storia del Premio</a></li>
           <li><a href="stampa.html">Come il Premio stupì la stampa</a></li>
@@ -27,7 +28,7 @@
           <li><a href="archivio-premio.html">Archivio</a></li>
         </ul>
       </li>
-      <li>Mostre ed eventi
+      <li class="has-submenu">Mostre ed eventi <span class="arrow">▾</span>
         <ul class="dropdown-menu">
           <li><a href="in-corso.html">In corso</a></li>
           <li><a href="archivio-mostre.html">Archivio mostre ed eventi</a></li>
@@ -39,7 +40,6 @@
       <li><a href="info-contatti.html">Info e Contatti</a></li>
       <li><a href="https://galleriadelpremio.substack.com/" target="_blank">Cronache del Premio</a></li>
     </ul>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </nav>
 </header>
 
@@ -59,15 +59,10 @@
 <script src="script.js"></script>
 
 <script type="text/javascript">
-  window.$crisp = [];
-  window.CRISP_WEBSITE_ID = "735a40ca-6953-4993-a94e-cefca26a00e9";
-  (function () {
-    d = document;
-    s = d.createElement("script");
-    s.src = "https://client.crisp.chat/l.js";
-    s.async = 1;
-    d.getElementsByTagName("head")[0].appendChild(s);
-  })();
+window.$crisp=[];window.CRISP_WEBSITE_ID="735a40ca-6953-4993-a94e-cefca26a00e9";
+(function(){d=document;s=d.createElement("script");
+s.src="https://client.crisp.chat/l.js";s.async=1;
+d.getElementsByTagName("head")[0].appendChild(s);})();
 </script>
 
 </body>

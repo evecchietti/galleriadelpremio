@@ -17,6 +17,7 @@ nav.main-nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
 .menu {
   list-style: none;
@@ -42,17 +43,18 @@ nav.main-nav {
   padding: 0.5rem;
   list-style: none;
   z-index: 99;
+  min-width: 200px;
 }
-.menu > li:hover .dropdown-menu {
+.has-submenu:hover .dropdown-menu {
   display: block;
 }
-.menu > li:has(ul)::after {
-  content: ' ▾';
+.arrow {
+  font-size: 0.8em;
 }
 .hamburger {
   display: none;
   font-size: 1.5rem;
-  margin-left: 1rem;
+  margin-left: auto;
   cursor: pointer;
 }
 @media (max-width: 768px) {
@@ -64,7 +66,7 @@ nav.main-nav {
     top: 60px;
     right: 0;
     padding: 1rem;
-    width: 70%;
+    width: 80%;
     border: 1px solid #ccc;
   }
   .menu.open {
@@ -72,7 +74,13 @@ nav.main-nav {
   }
   .hamburger {
     display: block;
-    margin-left: auto;
+  }
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: none;
+    padding-left: 1rem;
   }
 }
 main {
